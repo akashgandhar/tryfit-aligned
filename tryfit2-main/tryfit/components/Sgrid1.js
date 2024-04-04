@@ -1,6 +1,7 @@
 import { fadeIn } from "@/utils/motion";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Sgrid1() {
   const divleft = useRef(null);
