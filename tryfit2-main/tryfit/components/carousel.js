@@ -6,25 +6,25 @@ export default function Carousel(){
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
@@ -32,31 +32,31 @@ export default function Carousel(){
 
                 {/* doubles */}
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
                 <div className="slide">
                     <img src="/images/fortcollins.png" />
                 </div>
                 <div className="slide">
-                    <img src="/images/fortcollins.png" />
+                    <img src="/images/chicmoda.png" />
                 </div>
             </div>
         </div>
