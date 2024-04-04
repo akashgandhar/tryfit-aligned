@@ -72,7 +72,7 @@ export default function Footer(){
                         </svg>
                     </div>
                     <div className="flex justify-center text-center xl:mt-0 lg:mt-0 md:mt-4 mt-4 items-center ">
-                        <h2 className=" res font-abessinica xl:w-[750px] text-center">Subscribe to our news letter stay tuned for new web <br/>design and latest updates. Let's do it!</h2>
+                        <h2 className=" res font-abessinica xl:w-[750px] text-center">Subscribe to our news letter stay tuned for new web <br/>design and latest updates. Let&apos;s do it!</h2>
                     </div>
                     <div className=" flex flex-col lg:mt-0 xl:mt-0 md:mt-8 mt-8  md:items-center items-center font-ABeeZee gap-7">
                         <h2>Privacy Policy</h2>

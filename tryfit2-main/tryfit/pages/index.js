@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="backgroundClass">
+    <div className="backgroundClass overflow-x-hidden">
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
