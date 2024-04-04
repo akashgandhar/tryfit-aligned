@@ -17,28 +17,14 @@ export default function Sgrid2() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 84 84"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <ellipse
-                cx="42.0334"
-                cy="42"
-                rx="41.4982"
-                ry="42"
-                fill="#D9D9D9"
-              />
-            </svg>
+          <img src="/images/person.png" alt="ellipse" width="50"
+              height="60" className=" rounded-full" />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
-              Aryan Yadav
+              Shivani Jangra
             </h2>
           </div>
           <p className="md:text-xs text-xs lg:text-md xl:text-xl mt-6 pr-4 ml-12 max-w-[650px] font-aventa">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.Ducimus,
-            incidunt? Ipsam, pariatur quo.Voluptatem cum eum debitis eveniet
+          &quot;As a pro athlete, I need gear that keeps up. Their fabrics exceed expectations. Highly recommended!&quot;
           </p>
         </span>
       </motion.div>
@@ -50,28 +36,14 @@ export default function Sgrid2() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 84 84"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <ellipse
-                cx="42.0334"
-                cy="42"
-                rx="41.4982"
-                ry="42"
-                fill="#D9D9D9"
-              />
-            </svg>
+          <img src="/images/person2.png" alt="ellipse" width="50"
+              height="60" className=" rounded-full" />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
-              Aryan Yadav
+              Vishal Sharma
             </h2>
           </div>
           <p className="md:text-xs text-xs lg:text-md xl:text-xl mt-6 pr-4 ml-12 max-w-[650px] font-aventa">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.Ducimus,
-            incidunt? Ipsam, pariatur quo.Voluptatem cum eum debitis eveniet
+          &quot;Stumbled upon this company searching for high-performance gear. Their fabrics are lightweight, breathable, and functional.&quot;
           </p>
         </span>
       </motion.span>

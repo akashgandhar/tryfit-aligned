@@ -49,7 +49,7 @@ export default function Footer(){
                         <h2 className=" res mt-4">China</h2>
                     </div>
                     <div className="font-ABeeZee xl:pr-2 lg:pr-32">
-                        <h2 className="res  underline mt-5 ">COMPANY</h2>
+                        <Link href={"/Blog"} className="res  underline mt-5 ">COMPANY</Link>
                         <h2 className=" mt-7 res">About Us</h2>
                         <h2 className=" mt-4 res">Catalogue</h2>
                         <h2 className=" mt-4 res">Teams</h2>
