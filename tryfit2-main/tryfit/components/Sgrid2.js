@@ -17,7 +17,7 @@ export default function Sgrid2() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-          <img src="/images/person.png" alt="ellipse" width="50"
+          <Image src="/images/person.png" alt="ellipse" width="50"
               height="60" className=" rounded-full" />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
               Shivani Jangra
@@ -36,7 +36,7 @@ export default function Sgrid2() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-          <img src="/images/person2.png" alt="ellipse" width="50"
+          <Image src="/images/person2.png" alt="ellipse" width="50"
               height="60" className=" rounded-full" />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
               Vishal Sharma

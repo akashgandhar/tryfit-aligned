@@ -32,7 +32,7 @@ export default function Sgrid1() {
                 fill="#D9D9D9"
               />
             </svg> */}
-            <img src="/images/person.png" alt="ellipse" width="50"
+            <Image src="/images/person.png" alt="ellipse" width="50"
               height="60" className=" rounded-full" />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
               Karan Puri
@@ -52,7 +52,7 @@ export default function Sgrid1() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-          <img src="/images/person.png" alt="ellipse" width="50"
+          <Image src="/images/person.png" alt="ellipse" width="50"
               height="60" className=" rounded-full" />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
               Sundar Nadella
