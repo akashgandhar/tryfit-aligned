@@ -62,7 +62,11 @@ export default function FaqSection() {
     observer.observe(ref.current);
 
     return () => {
-      observer.unobserve(ref.current);
+      try {
+        observer.unobserve(ref.current);
+      } catch (error) {
+        null;
+      }
     };
   }, []);
 
@@ -90,7 +94,11 @@ export default function FaqSection() {
     observer.observe(ref.current);
 
     return () => {
-      observer.unobserve(ref.current);
+      try {
+        observer.unobserve(ref.current);
+      } catch (error) {
+        null;
+      }
     };
   }, []);
 

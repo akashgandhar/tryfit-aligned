@@ -49,14 +49,14 @@ export default function India(){
             <div className="mt-[150px]">
                 <img src="/images/ourlocation.png" className="w-full "/>
             </div>
-            <section className="xl:grid xl:grid-cols-[1.5fr_0.5fr]">
+            <section className="flex gap-2 xl:flex-row flex-col-reverse">
                 <div>
                 {accordianData.map((data,index) => {
                     return <Accordian1 key={index} open={index === open } map={data.map} title={data.title} branch={data.Branch} image={data.image} name ={data.Name} address = {data.address} contact={data.contact} toggle={() => toggle(index)}/>
                     })}
                 </div>
-                <div className="bg-[#212121] text-white font-heavitas xl:m-6 xl:mb-0 xl:mr-0 mt-4">
-                    <h2 className="xl:tansform xl:rotate-90 xl:mt-40 text-5xl p-4">India</h2>
+                <div className="xl:bg-[#212121] text-white font-heavitas mt-4">
+                    <h2 className="xl:tansform xl:rotate-90 xl:mt-40 text-5xl">India</h2>
                 </div>
             </section>
             <Footer/>

@@ -15,13 +15,13 @@ export default function FabricPerformance() {
   const headingRef = useRef(null);
   const isInView = useInView(headingRef);
   return (
-    <div className=" overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden flex flex-col pb-5 sm:py-10">
       <motion.div
         variants={textVariant(0.5)}
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
         ref={headingRef}
-        className=""
+        className="flex-1"
       >
         <div className="flex flex-col justify-center items-center gap-2 px-4 sm:px-6 md:px-8 lg:px-12">
           <a
@@ -107,9 +107,9 @@ export default function FabricPerformance() {
           </Link>
         </div>
       </motion.div>
-      {/* <div className="absolute bottom-0 w-screen overflow-hidden"> */}
+      <div id="check" className="flex  justify-end">
         <Carousel1 />
-      {/* </div> */}
+      </div>
     </div>
   );
 }

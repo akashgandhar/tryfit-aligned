@@ -209,7 +209,7 @@ export default function OurTeam() {
           ref={rightDivRef}
           className="grid grid-rows-[1fr_1fr_1fr]"
         >
-          <div className="font-ABeeZee border border-white border-x-0">
+          <div className="font-ABeeZee border border-white border-x-0 hover:opacity-100 opacity-50">
             <button
               className="flex flex-col"
               onClick={() => {
@@ -233,7 +233,7 @@ export default function OurTeam() {
               </p>
             </button>
           </div>
-          <div>
+          <div className="hover:opacity-100 opacity-50">
             <button
               className="flex flex-col no-underline"
               onClick={() => {
@@ -258,7 +258,7 @@ export default function OurTeam() {
               </div>
             </button>
           </div>
-          <div>
+          <div className="hover:opacity-100 opacity-50">
             <button
               className="flex flex-col no-underline"
               onClick={() => {

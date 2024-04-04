@@ -30,7 +30,7 @@ export default function Header() {
           <img
             src="/images/logo.png"
             alt="logo"
-            className=" h-full w-14 sm:w-full aspect-square  object-contain"
+            className=" h-full w-10 sm:w-full aspect-square  object-contain"
           />
         </Link>
         {/* hamburger */}

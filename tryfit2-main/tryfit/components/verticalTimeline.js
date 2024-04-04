@@ -1,5 +1,3 @@
-
-
 import timelineElements from "./timelineElements";
 
 import {
@@ -25,23 +23,23 @@ function Timeline() {
 
           return (
             <VerticalTimelineElement
+              contentStyle={{ background: "#333", color: "#fff" }}
               key={element.key}
               date={element.date}
               dateClassName="date"
               iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
-
             >
-            <div className="bg-white/15">
+              <div className="">
                 <h3 className="vertical-timeline-element-title">
-                    {element.title}
+                  {element.title}
                 </h3>
                 <h5 className="vertical-timeline-element-subtitle">
-                    {element.location}
+                  {element.location}
                 </h5>
                 <div>
-                    <img src={element.image} alt="" />
+                  <img src={element.image} alt="" />
                 </div>
-            </div>
+              </div>
             </VerticalTimelineElement>
           );
         })}
