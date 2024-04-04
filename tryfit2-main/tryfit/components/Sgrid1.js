@@ -40,7 +40,7 @@ export default function Sgrid1() {
             </h2>
           </div>
           <p className="md:text-xs text-xs lg:text-md xl:text-xl mt-6 pr-4 ml-12 max-w-[650px] font-aventa">
-          &quot;Tried many brands, but none compare. Their apparel keeps me cool, dry, and comfy. I'm a customer for life!&quot;
+          &quot;Tried many brands, but none compare. Their apparel keeps me cool, dry, and comfy. I&apos;m a customer for life!&quot;
           </p>
         </span>
       </motion.div>
