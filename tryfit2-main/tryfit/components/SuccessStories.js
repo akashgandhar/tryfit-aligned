@@ -8,7 +8,7 @@ export default function SuccesStories() {
   const headingRef = useRef(null);
   const isInView = useInView(headingRef);
   return (
-    <div className="text-white ml-8 md:ml-20 lg:ml-20 xl:ml-40">
+    <div id="testinomials" className="text-white ml-8 md:ml-20 lg:ml-20 xl:ml-40">
       <div id="SuccessStories" className=" text-black  mt-32 "></div>
       <motion.div
         variants={fadeIn("right", "tween", 0.5, 1)}

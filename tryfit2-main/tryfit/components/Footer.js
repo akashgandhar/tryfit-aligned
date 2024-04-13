@@ -77,13 +77,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className=" xl:flex-col lg:flex-col  justify-center font-ABeeZee xl:flex lg:flex md:hidden hidden">
-          <h1 className="res xl:ml-20 xl:text-start lg:text-center underline  mb-5 ">
+        <div className="text-left xl:flex-col lg:flex-col items-center w-full  justify-center font-ABeeZee xl:flex lg:flex md:hidden hidden">
+          <h1 className="res w-full text-left xl:ml-40 xl:text-start  underline  mb-5 ">
             Instagram
           </h1>
-          <div className="grid-container xl:ml-20 lg:ml-40 h-auto w-9  ">
+          {/* <div className="grid-container xl:ml-20 lg:ml-40 h-auto w-9  w-full"> */}
             <InstagramPostEmbed />
-          </div>
+          {/* </div> */}
         </div>
         <div className="flex gap-8 justify-between items-start">
           <div className="font-ABeeZee justify-center xl:mr-2 lg:pl-32">

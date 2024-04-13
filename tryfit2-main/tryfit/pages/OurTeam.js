@@ -125,7 +125,7 @@ export default function OurTeam() {
               />
             </div>
 
-            <div className=" text-sm/[21px]">What Others Say About Us</div>
+            <Link href={"/#testinomials"}><div className=" text-sm/[21px]">What Others Say About Us</div></Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

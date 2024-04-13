@@ -101,7 +101,7 @@ export default function FabricPerformance() {
           </div>
           <Link
             href="/Contact"
-            className="bg-btn_hover font-aventa_bold font-bold py-2 px-4 sm:py-3.5 sm:px-10 rounded-[13px] mt-8 md:mt-8"
+            className="bg-btn_hover font-aventa_bold font-bold py-2 px-4 sm:py-3.5 sm:px-10 rounded-[13px] mt-8 md:mt-8 hover:scale-105 transition-all ease-in-out duration-300"
           >
             Approach Us
           </Link>

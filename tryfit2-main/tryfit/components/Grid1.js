@@ -1,5 +1,6 @@
 import { fadeIn } from "@/utils/motion";
 import { useInView, motion } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Grid1() {
@@ -24,18 +25,20 @@ export default function Grid1() {
               </h2>
               <h2 className=" flex text-dive_color md:text-4xl text-3xl lg:text-6xl xl:text-6xl font-heavitas  gap-4">
                 WORLD
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className=" w-8 h-8 xl:w-20 xl:h-20 lg:w-14 lg:h-14 md:w-12 md:h-12 rotate-45  hover:scale-105 transition-all ease-in-out duration-300 "
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm.53 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v5.69a.75.75 0 0 0 1.5 0v-5.69l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <Link href={"/OurTeam"}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className=" w-8 h-8 xl:w-20 xl:h-20 lg:w-14 lg:h-14 md:w-12 md:h-12 rotate-45  hover:scale-105 transition-all ease-in-out duration-300 "
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm.53 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v5.69a.75.75 0 0 0 1.5 0v-5.69l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </Link>
               </h2>
             </div>
             <div className="flex md:ml-[120px] lg:ml-[162px] xl:ml-[168px] px-5">
@@ -67,9 +70,11 @@ export default function Grid1() {
               </svg>
             </div>
           </div>
-          <button className="hover:scale-105 transition-all ease-in-out duration-300 flex text-dive_color outline border border-dive_color w-[140px] md:w-[240px] lg:w-[240px] xl:w-[240px] text-center justify-center py-1 lg:text-4xl md:text-3xl sm:text-xl rounded-[13px] font-aventa mt-4 xl:mt-4">
-            Our Story
-          </button>
+          <Link href={"/OurTeam"}>
+            <button className="hover:scale-105 transition-all ease-in-out duration-300 flex text-dive_color outline border border-dive_color w-[140px] md:w-[240px] lg:w-[240px] xl:w-[240px] text-center justify-center py-1 lg:text-4xl md:text-3xl sm:text-xl rounded-[13px] font-aventa mt-4 xl:mt-4">
+              Our Story
+            </button>
+          </Link>
 
           <p className="text-dive_color max-w-3xl mt-7 font-aventa_bold font-medium sm:text-xl md:text-2xl lg:text-2xl xl:text-xl pb-4">
             &quot;Try fit Fabrics, formerly Bhatia Traders, has been a trusted
@@ -95,7 +100,7 @@ export default function Grid1() {
                 className="w-6 h-6 "
               />
 
-              <div className=" text-sm/[21px]">Instagram</div>
+              <Link target="_blank" href={"https://www.instagram.com/tryfitfabrics/"}><div className=" text-sm/[21px]">Instagram</div></Link>
             </span>
           </button>
         </div>

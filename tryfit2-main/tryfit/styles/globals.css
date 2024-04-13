@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +8,7 @@
 /* *{
   border: 2px solid red;
 } */
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -16,21 +16,20 @@ body {
   /* background-size: cover; 
   background-position: center; 
   background-attachment: fixed; 
-  background-repeat: no-repeat; Do not repeat the image */
+  background-repeat: no-repeat; Do not repeat the image */;
 }
-body{
-  background-image: url('/images/bg1.png');
+body {
+  background-image: url("/images/bg1.png");
 }
-.res{
-  font-size: clamp(12px, 4vw ,18px);
+.res {
+  font-size: clamp(12px, 4vw, 18px);
 }
-.gridbg{
-  background-image: url('/images/grid.png');
+.gridbg {
+  background-image: url("/images/grid.png");
   background-size: cover;
-
 }
 .span-bg {
-  background-image: url('/images/div2.png');
+  background-image: url("/images/div2.png");
 }
 
 /* animation */
@@ -46,10 +45,10 @@ body{
 
 @keyframes slideIn {
   from {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -60,10 +59,10 @@ body{
 
 @keyframes slideInItem {
   from {
-      transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   to {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -88,10 +87,9 @@ body{
   transition: transform 0.3s ease;
 }
 
-
 .span-bg1 {
-  background-color: #FFFFE7 ;
-  background-image: url('/images/logo1.png');
+  background-color: #ffffe7;
+  background-image: url("/images/logo1.png");
   background-repeat: no-repeat;
   background-size: contain; /* Makes the image fit entirely inside the container */
   background-position: center center; /* Centers the image in the container */
@@ -104,66 +102,62 @@ body{
   background-size: cover; /* Or any other size */
 }
 
-
-.input{
- @apply  outline-none border-b-2 border-underline text-black bg-light_background text-2xl p-2; 
+.input {
+  @apply outline-none border-b-2 border-underline text-black bg-light_background text-2xl p-2;
 }
 
-.input-placeholder::placeholder{
+.input-placeholder::placeholder {
   @apply font-aventa text-dark_green text-xl;
 }
 
-.input-placeholder2::placeholder{
+.input-placeholder2::placeholder {
   @apply font-aventa text-white text-2xl;
 }
 
-
-.input2{
+.input2 {
   @apply outline-none border-b-2 border-white pb-2 text-2xl;
 }
 
-
-.btn_green{
+.btn_green {
   @apply border border-btn_hover bg-btn_hover/30 text-white;
 }
 
-.btn_shadow{
-  box-shadow: 7px 1px 19.6px rgba(130, 255, 111, 40) ;
+.btn_shadow {
+  box-shadow: 7px 1px 19.6px rgba(130, 255, 111, 40);
 }
 
 /* font data */
 
 @font-face {
-  font-family: 'Aventa';
-  src: url('/fonts/Aventa-Regular.woff2') format('woff2'),
-       url('/fonts/Aventa-Regular.woff') format('woff');
+  font-family: "Aventa";
+  src: url("/fonts/Aventa-Regular.woff2") format("woff2"),
+    url("/fonts/Aventa-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Heavitas';
-  src: url('/fonts/Heavitas.ttf') format('truetype');
+  font-family: "Heavitas";
+  src: url("/fonts/Heavitas.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Aventa Extra';
-  src: url('/fonts/Aventa-ExtraBoldItalic.woff2') format('woff2'),
-       url('/fonts/Aventa-ExtraBoldItalic.woff') format('woff');
+  font-family: "Aventa Extra";
+  src: url("/fonts/Aventa-ExtraBoldItalic.woff2") format("woff2"),
+    url("/fonts/Aventa-ExtraBoldItalic.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-ExtraBoldItalic.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-ExtraBoldItalic.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Rogue_Sans';
-  src: url('/fonts/Rogue_Sans_BoldItalic.ttf') format('truetype');
+  font-family: "Rogue_Sans";
+  src: url("/fonts/Rogue_Sans_BoldItalic.ttf") format("truetype");
 }
-
 
 /* popup */
 
@@ -182,7 +176,7 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  background-color: #04544B;
+  background-color: #04544b;
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
   border-radius: 8px;
   z-index: 10;
@@ -214,7 +208,7 @@ body{
 
 .btnContainer button {
   width: 100%;
-  margin: .5rem;
+  margin: 0.5rem;
   padding: 16px 0;
   /* border: none; */
   border: 1px solid #411b57;
@@ -256,37 +250,41 @@ body{
   }
 }
 
+button {
+  @apply hover:scale-105 transition-all ease-in-out duration-200;
+}
+
 /* instagram data */
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .instagram-posts-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 500px; 
-  margin: auto; 
+  width: 500px;
+  margin: auto;
 }
 
 .instagram-post-item {
-  width: calc((800px - 20px)); 
-  height: 250px; 
+  width: calc((800px - 20px));
+  height: 250px;
   overflow: hidden;
   margin: 0 10px;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: flex-start;
   transform: scale(1);
-  transform-origin: center; 
+  transform-origin: center;
 }
 
 .instagram-post-item blockquote {
-  transform: scale(0.4); 
-  transform-origin: center center; 
+  transform: scale(0.4);
+  transform-origin: center center;
 }
 
 @media (max-width: 980px) {
@@ -294,16 +292,16 @@ body{
     flex-direction: row;
     width: 600px;
     margin: 10px auto;
-    display: none; 
+    display: none;
   }
   .instagram-post-item {
-    width: 100%; 
-    margin: 20px 10px; 
-    height: 200px; 
+    width: 100%;
+    margin: 20px 10px;
+    height: 200px;
   }
 
   .instagram-post-item blockquote {
-    transform: scale(1); 
+    transform: scale(1);
   }
 }
 
@@ -311,16 +309,16 @@ body{
   .instagram-posts-container {
     flex-direction: column;
     width: 200px;
-    margin: 10px auto; 
+    margin: 10px auto;
   }
   .instagram-post-item {
-    width: 100%; 
-    margin: 20px 10px; 
-    height: 200px; 
+    width: 100%;
+    margin: 20px 10px;
+    height: 200px;
   }
 
   .instagram-post-item blockquote {
-    transform: scale(1); 
+    transform: scale(1);
   }
 }
 
@@ -330,15 +328,15 @@ body{
   width: 700px;
   height: 400px;
 
-  @media  (max-width: 1023px) {
+  @media (max-width: 1023px) {
     width: 600px;
     height: 450px;
   }
-  @media  (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 500px;
     height: 400px;
   }
-  @media  (max-width: 767px) {
+  @media (max-width: 767px) {
     width: 200px;
     height: 400px;
   }
@@ -360,7 +358,6 @@ body{
   height: 100%;
   object-fit: cover;
 }
-
 
 /* carousel */
 
@@ -392,74 +389,67 @@ body{
   display: grid;
   place-items: center;
   overflow: hidden;
-
-  
 }
 
-.slide-track{
+.slide-track {
   display: flex;
-  width: calc(250px*18);
+  width: calc(250px * 18);
   animation: scroll 40s linear infinite;
-  @media (max-width:767px) {
-    width: calc(150px*18);
+  @media (max-width: 767px) {
+    width: calc(150px * 18);
   }
 }
 
-.slide-track1{
+.slide-track1 {
   display: flex;
-  width: calc(250px*18);
+  width: calc(250px * 18);
   animation: scroll 40s linear infinite;
 }
 
-.slide-track2{
+.slide-track2 {
   display: flex;
-  width: calc(250px*18);
+  width: calc(250px * 18);
   animation: scroll_new 40s linear infinite;
-  
-  
 }
 
-@keyframes scroll_new{
-  0%{
+@keyframes scroll_new {
+  0% {
     transform: translateX(0);
   }
-  100%{
-    transform: translateX(calc(-250px*9));;
+  100% {
+    transform: translateX(calc(-250px * 9));
   }
 }
 
-@keyframes scroll{
-  0%{
-    transform: translateX(calc(-250px*9));
+@keyframes scroll {
+  0% {
+    transform: translateX(calc(-250px * 9));
   }
-  100%{
-    transform: translateX(0);;
+  100% {
+    transform: translateX(0);
   }
 }
 
-.slide{
-
+.slide {
   height: 45px;
   width: 300px;
   display: flex;
   align-items: center;
   padding: 15px;
   perspective: 100px;
- 
 }
-.slide1{
-  background-color:#86FF73;
+.slide1 {
+  background-color: #86ff73;
   height: 45px;
   width: 300px;
   display: flex;
   align-items: center;
   padding: 15px;
   perspective: 100px;
- 
 }
 
-.slide2{
-  background-color:#86FF73;
+.slide2 {
+  background-color: #86ff73;
   height: 47px;
   width: 800px;
   display: flex;
@@ -468,36 +458,29 @@ body{
   /* perspective: 100px; */
 }
 
-.slide img{
+.slide img {
   width: 100%;
 }
 
-
-
-
-
 .slider::before,
-.slider::after{
- 
-  content: '';
+.slider::after {
+  content: "";
   height: 100%;
   position: absolute;
   width: 15%;
   z-index: 2;
-  
 }
 
-.slider::before{
-  left:0;
-  top:0;
+.slider::before {
+  left: 0;
+  top: 0;
 }
 
-.slider::after{
+.slider::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
 }
-
 
 /* progressbar */
 .progress-bar {
@@ -506,14 +489,12 @@ body{
   left: 0;
   right: 0;
   height: 10px;
-  background: #CB0049;
+  background: #cb0049;
   transform-origin: 0%;
   z-index: 2;
 }
 
-
 /* timeline */
-
 
 .title {
   font-size: 15em;
@@ -548,7 +529,6 @@ h3 {
   color: white;
 }
 
-
 @media only screen and (max-width: 1700px) {
   .vertical-timeline-element-date {
     display: block !important;
@@ -562,22 +542,12 @@ h3 {
   transition: height 500ms;
 }
 
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 1024px) {
   :root {
     --h2-font-size: 1.75rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -616,7 +586,6 @@ img {
 .login__inputs {
   display: grid;
 }
-
 
 .login__form {
   position: relative;

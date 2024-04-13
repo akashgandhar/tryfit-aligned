@@ -1,6 +1,7 @@
 import { useInView, motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Cgrid() {
   const headingRef = useRef(null);
@@ -11,6 +12,90 @@ export default function Cgrid() {
 
   const bottomDivRef = useRef(null);
   const BottomisInView = useInView(bottomDivRef);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [intrested, setIntrested] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const [isCostomerLoading, setIsCostomerLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setIsCostomerLoading(true);
+
+    if (!name || !email || !intrested || !phone) {
+      alert("Please fill all the fields");
+      setIsLoading(false);
+      setIsCostomerLoading(false);
+      return;
+    }
+
+    try {
+      emailjs
+        .send(
+          "service_7te7yap",
+          "template_h6ya07h",
+          {
+            from_name: { name },
+            from_email: "pru.bhatia14@gmail.com",
+            to_email: "pru.bhatia14@gmail.com",
+            message: message,
+            phone: phone,
+            intrested_in: intrested,
+            email: email,
+          },
+          "jIRcU-bum0P1ADl0z"
+        )
+        .then((result) => {
+          console.log(result);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log("error", error);
+          alert("Error");
+          setIsLoading(false);
+        });
+
+      emailjs
+        .send(
+          "service_7te7yap",
+          "template_h6ya07h",
+          {
+            from_name: name,
+            from_email: "pru.bhatia14@gmail.com",
+            to_email: email,
+            message: message,
+            phone: phone,
+            intrested_in: intrested,
+            email: email,
+          },
+          "jIRcU-bum0P1ADl0z"
+        )
+        .then((result) => {
+          console.log(result);
+          if (result.status === 412) {
+            alert("Error");
+            setIsCostomerLoading(false);
+            setIsLoading(false);
+          }
+          setIsCostomerLoading(false);
+        })
+        .catch((error) => {
+          console.log("error", error);
+          alert("Error");
+          setIsCostomerLoading(false);
+          setIsLoading(false);
+        });
+    } catch (error) {
+      setIsCostomerLoading(false);
+      setIsLoading(false);
+      console.log("fff", error);
+    }
+  };
 
   return (
     <div className="grid xl:grid-cols-[1.2fr_0.8fr] lg:grid-cols-[1.2fr_0.8fr] pr-8 ml-8 md:pr-20 sm:ml-8 md:ml-20 lg:ml-20 xl:ml-40 mt-12 gap-6">
@@ -29,6 +114,8 @@ export default function Cgrid() {
             <div className=" flex flex-col gap-10 w-full pr-10 ">
               <span className="w-full border-b border-[#547E4C] ">
                 <input
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
                   type="text"
                   placeholder="Name *"
                   className="flex input input-placeholder w-full text-dark_green "
@@ -36,13 +123,17 @@ export default function Cgrid() {
               </span>
               <span className="w-full border-b border-[#547E4C] ">
                 <input
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
                   type="text"
-                  placeholder="Last Name *"
+                  placeholder="Message *"
                   className="flex input input-placeholder w-full text-dark_green "
                 />
               </span>
               <span className="w-full border-b border-[#547E4C] ">
                 <input
+                  onChange={(e) => setPhone(e.target.value)}
+                  value={phone}
                   type="text"
                   placeholder="Phone Number *"
                   className="flex input input-placeholder w-full  text-dark_green "
@@ -50,6 +141,8 @@ export default function Cgrid() {
               </span>
               <span className="w-full border-b border-[#547E4C] ">
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   type="text"
                   placeholder="Email *"
                   className="flex input input-placeholder w-full text-dark_green "
@@ -57,14 +150,20 @@ export default function Cgrid() {
               </span>
               <span className="w-full border-b border-[#547E4C] ">
                 <input
+                  onChange={(e) => setIntrested(e.target.value)}
+                  value={intrested}
                   type="text"
                   placeholder="Message *"
                   className="flex input input-placeholder w-full text-dark_green pb-24"
                 />
               </span>
             </div>
-            <button className=" mt-10 w-52 items-center text-center rounded-[17px] py-3.5 bg-dark_green text-4xl mb-5">
-              SEND
+            <button
+              disabled={isLoading || isCostomerLoading}
+              onClick={handleSubmit}
+              className=" mt-10 w-52 items-center text-center rounded-[17px] py-3.5 bg-dark_green text-4xl mb-5"
+            >
+              {isLoading || isCostomerLoading ? "Loading..." : "Submit"}
             </button>
           </form>
         </span>

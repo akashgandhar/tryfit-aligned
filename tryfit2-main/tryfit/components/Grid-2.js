@@ -1,6 +1,7 @@
 import { useInView, motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function Grid2() {
   const divleft = useRef(null);
@@ -17,32 +18,34 @@ export default function Grid2() {
         animate={isLeftView ? "show" : "hidden"}
         className="flex flex-col w-full xl:h-[400px]  lg:h-[500px] md:h-[400px] gridbg backdrop-blur-md rounded-[25px] text-white "
       >
-        <div className=" mt-[90px] ml-10">
-          <h2 className="flex font-abessinica  lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
-            CUSTOM{" "}
-          </h2>
-          <h2 className="flex font-abessinica xl:mt-7 lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
-            FABRIC
-            <span className="ml-4 mt-2">
-              <svg 
-                width="64"
-                height="50"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="hover:scale-105 transition-all ease-in-out duration-300"
-              >
-                <circle cx="32" cy="32" r="32" fill="#5B0000" />
-                <path
-                  d="M17.3031 43.868C16.522 44.6491 16.522 45.9154 17.3031 46.6964C18.0841 47.4775 19.3505 47.4775 20.1315 46.6964L17.3031 43.868ZM47.2833 18.7162C47.2833 17.6116 46.3879 16.7162 45.2833 16.7162L27.2833 16.7162C26.1788 16.7162 25.2833 17.6116 25.2833 18.7162C25.2833 19.8208 26.1788 20.7162 27.2833 20.7162L43.2833 20.7162L43.2833 36.7162C43.2833 37.8208 44.1788 38.7162 45.2833 38.7162C46.3879 38.7162 47.2833 37.8208 47.2833 36.7162L47.2833 18.7162ZM20.1315 46.6964L46.6975 20.1304L43.8691 17.302L17.3031 43.868L20.1315 46.6964Z"
-                  fill="white"
-                />
-              </svg>
-            </span>{" "}
-          </h2>
-        </div>
+        <Link href="/Contact">
+          <div className=" mt-[90px] ml-10">
+            <h2 className="flex font-abessinica  lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
+              CUSTOM{" "}
+            </h2>
+            <h2 className="flex font-abessinica  lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
+              FABRIC
+              <span className="ml-4 mt-2">
+                <svg
+                  width="64"
+                  height="50"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="hover:scale-105 transition-all ease-in-out duration-300"
+                >
+                  <circle cx="32" cy="32" r="32" fill="#5B0000" />
+                  <path
+                    d="M17.3031 43.868C16.522 44.6491 16.522 45.9154 17.3031 46.6964C18.0841 47.4775 19.3505 47.4775 20.1315 46.6964L17.3031 43.868ZM47.2833 18.7162C47.2833 17.6116 46.3879 16.7162 45.2833 16.7162L27.2833 16.7162C26.1788 16.7162 25.2833 17.6116 25.2833 18.7162C25.2833 19.8208 26.1788 20.7162 27.2833 20.7162L43.2833 20.7162L43.2833 36.7162C43.2833 37.8208 44.1788 38.7162 45.2833 38.7162C46.3879 38.7162 47.2833 37.8208 47.2833 36.7162L47.2833 18.7162ZM20.1315 46.6964L46.6975 20.1304L43.8691 17.302L17.3031 43.868L20.1315 46.6964Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>{" "}
+            </h2>
+          </div>
+        </Link>
         <div>
-          <p className="font-abessinica ml-10 mt-4  md:text-[28px] lg:text-[28px] xl:text-[28px] max-w-[470px] pb-4 ">
+          <p className="font-abessinica ml-10  md:text-[28px] lg:text-[28px] xl:text-[28px] max-w-[470px] pb-4 ">
             We Make Custom Fabrics On Demand Too!
           </p>
         </div>
@@ -96,7 +99,7 @@ export default function Grid2() {
             </p>
           </div>
           <div className="grid grid-cols-2">
-            <div>
+            <div><Link href={`/Blog`}>
               <button className="flex whitespace-nowrap hover:scale-105 transition-all ease-in-out duration-300 items-center ml-4 bg-dive_color mt-10 xl:mt-4 md:mt-4 lg:mt-4 px-[25px] py-[10px] rounded-[14px] xl:text-xl md:text-2xl text-xs lg:text-xl">
                 Read More
                 <svg
@@ -112,7 +115,7 @@ export default function Grid2() {
                     fill="white"
                   />
                 </svg>
-              </button>
+              </button></Link>
             </div>
             <div className="flex justify-end mt-4">
               <svg

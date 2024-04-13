@@ -2,9 +2,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Accordian from "@/components/accordian";
 import MyMapComponent from "@/components/googlemap";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/utils/motion";
+import { useRouter, useSearchParams } from "next/navigation";
+import emailjs from "@emailjs/browser";
+
 const accordianData = [
   {
     title: "Lorem ipsum dolor sit amet, consectetur",
@@ -49,9 +52,102 @@ export default function Contact() {
   const [intrested, setIntrested] = useState("");
   const [phone, setPhone] = useState("");
 
+  const router = useRouter();
+
+  const product = useSearchParams().get("product");
+  const color = useSearchParams().get("color");
+
+  useEffect(() => {
+    if (product) {
+      headingRef2.current.scrollIntoView({ behavior: "smooth" });
+      setIntrested("Intrested In " + color + " " + product + "Fabric");
+    } else {
+      setIntrested("");
+    }
+  }, []);
+
+  const [isCostomerLoading, setIsCostomerLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setIsCostomerLoading(true);
+
+    if (!name || !email || !message || !intrested || !phone) {
+      alert("Please fill all the fields");
+      setIsLoading(false);
+      setIsCostomerLoading(false);
+      return;
+    }
+
+    try {
+      emailjs
+        .send(
+          "service_7te7yap",
+          "template_h6ya07h",
+          {
+            from_name: { name },
+            from_email: "pru.bhatia14@gmail.com",
+            to_email: "pru.bhatia14@gmail.com",
+            message: message,
+            phone: phone,
+            intrested_in: intrested,
+            email: email,
+          },
+          "jIRcU-bum0P1ADl0z"
+        )
+        .then((result) => {
+          console.log(result);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log("error", error);
+          alert("Error");
+          setIsLoading(false);
+        });
+
+      emailjs
+        .send(
+          "service_7te7yap",
+          "template_h6ya07h",
+          {
+            from_name: name,
+            from_email: "pru.bhatia14@gmail.com",
+            to_email: email,
+            message: message,
+            phone: phone,
+            intrested_in: intrested,
+            email: email,
+          },
+          "jIRcU-bum0P1ADl0z"
+        )
+        .then((result) => {
+          console.log(result);
+          if (result.status === 412) {
+            alert("Error");
+            setIsCostomerLoading(false);
+            setIsLoading(false);
+          }
+          setIsCostomerLoading(false);
+        })
+        .catch((error) => {
+          console.log("error", error);
+          alert("Error");
+          setIsCostomerLoading(false);
+          setIsLoading(false);
+        });
+    } catch (error) {
+      setIsCostomerLoading(false);
+      setIsLoading(false);
+      console.log("fff", error);
+    }
+  };
+
   return (
     <div className="overflow-x-hidden">
       <Header />
+
       {/* Contact us section */}
       <motion.div
         variants={textVariant(0.5)}
@@ -76,6 +172,7 @@ export default function Contact() {
       </motion.div>
       {/* Get in Touch Section */}
       <motion.div
+        id="getInTouch"
         variants={fadeIn("right", "spring", 0.5, 1)}
         initial="hidden"
         animate={isInView2 ? "show" : "hidden"}
@@ -107,6 +204,8 @@ export default function Contact() {
             <div className="flex flex-col ">
               <span className="border-b flex  mr-5">
                 <input
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   type="text"
                   placeholder="Name"
                   className="outline-none bg-black/0 input-placeholder2 input2"
@@ -114,15 +213,19 @@ export default function Contact() {
               </span>
               <span className="border-b flex  mr-5">
                 <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="text"
                   placeholder="Email"
-                  className="outline-none bg-black/0   input-placeholder2 input2 mt-16 "
+                  className="outline-none bg-black/0  input-placeholder2 input2 mt-16 "
                 />
               </span>
             </div>
             <div className="flex flex-col mt-16 ">
               <span className="border-b flex  mr-5">
                 <input
+                  onChange={(e) => setIntrested(e.target.value)}
+                  value={intrested}
                   type="text"
                   placeholder="Intrested In"
                   className="outline-none bg-black/0 input-placeholder2 input2"
@@ -130,6 +233,8 @@ export default function Contact() {
               </span>
               <span className="border-b flex  mr-5">
                 <input
+                  onChange={(e) => setPhone(e.target.value)}
+                  value={phone}
                   type="text"
                   placeholder="Phone No."
                   className="outline-none bg-black/0 input-placeholder2 input2 mt-16 "
@@ -138,26 +243,47 @@ export default function Contact() {
             </div>
             <span className="border-b flex  mr-5">
               <input
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
                 type="text"
                 placeholder="Message"
                 className="outline-none bg-black/0 input-placeholder2 input2 mt-16 xl:mr-16 lg:mr-16"
               />
             </span>
           </form>
-          <button className="bg-btn_hover hover:scale-[102%] ease-in-out duration-300 transition-all text-black py-2 px-12 mt-8 text-4xl rounded-[7px] font-aventa flex items-center gap-2">
-            Sumbit
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-9 h-9"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
-                clipRule="evenodd"
-              />
-            </svg>
+          <button
+            disabled={isLoading || isCostomerLoading}
+            onClick={handleSubmit}
+            className="bg-btn_hover hover:scale-[102%] ease-in-out duration-300 transition-all text-black py-2 px-12 mt-8 text-4xl rounded-[7px] font-aventa flex items-center gap-2"
+          >
+            {isLoading || isCostomerLoading ? "Loading..." : "Submit"}
+            {isCostomerLoading || isLoading ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-9 h-9"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-9 h-9"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            )}
           </button>
         </motion.div>
 
@@ -235,7 +361,7 @@ export default function Contact() {
       </div>
       {/* Find Us On Maps */}
       {/* FAQ Section */}
-      <div className=" text-white mt-44 grid xl:grid-cols-[1fr_1fr]">
+      <div id="FAQ" className=" text-white mt-44 grid xl:grid-cols-[1fr_1fr]">
         <motion.div
           variants={fadeIn("down", "tween", 0.5, 1)}
           initial="hidden"

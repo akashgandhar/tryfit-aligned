@@ -1,15 +1,21 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { InstagramEmbed } from "react-social-media-embed";
 
 const MultipleInstagramPostsEmbed = () => {
-  
-
   return (
     <div className="instagram-posts-container ">
-      {['https://www.instagram.com/p/C4lU_41tMER/', 'https://www.instagram.com/p/C4YBo6ZtEv5/', 'https://www.instagram.com/p/C4dLrhJN2hx/'].map((url, index) => (
-        <div key={index} className="instagram-post-item rounded-2xl">
-          <blockquote className="instagram-media" data-instgrm-permalink={url} data-instgrm-version="14"></blockquote>
-        </div>
-      ))}
+      <div className="flex gap-2 flex-row items-center justify-center w-full ">
+        {[
+          "https://www.instagram.com/p/C4lU_41tMER/",
+          "https://www.instagram.com/p/C4YBo6ZtEv5/",
+          "https://www.instagram.com/p/C4dLrhJN2hx/",
+        ].map((url, index) => (
+          <InstagramEmbed
+            url={url}
+            className="lg:aspect-auto aspect-[9/16] rounded-lg h-56"
+          />
+        ))}
+      </div>
     </div>
   );
 };

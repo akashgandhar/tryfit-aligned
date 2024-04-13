@@ -44,16 +44,18 @@ export default function Accordian1({
             />
           </div>
 
-          <div className="grid xl:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr]">
-            <div>
+          <div className="grid pr-10 w-full items-center justify-between grid-cols-1 xl:grid-cols-1">
+            <div className="w-">
               <h1 className="xl:text-[40px] font-aventa text-btn_hover mt-16">
                 Get In Touch At
               </h1>
-              <ul className="xl:ml-[64px] pb-[80px] mt-4 xl:text-[22px] lg:text-[22px] md:text-[22px] list-disc font-aventa">
+              <ul className="xl:ml-[64px] pb-10 md:pb-[80px] mt-4 xl:text-[22px] lg:text-[22px] md:text-[22px] text-[22px] list-disc font-aventa">
                 <li>{address}</li>
               </ul>
+            </div>
+            <div className="flex w-full md:flex-row flex-col items-center justify-between ">
               <div>
-                <ul className=" xl:ml-16 pb-[80px] list-disc font-aventa xl:text-[22px]">
+                <ul className=" xl:ml-16  pb-10 list-disc font-aventa xl:text-[22px]">
                   <li className="flex gap-4">
                     <h1 className="text-btn_hover xl:text-xl lg:text-xl md:text-xl text-xs">
                       Contact No. :{" "}
@@ -70,21 +72,21 @@ export default function Accordian1({
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className=" xl:mt-[300px] lg:mt-[250px] xl:ml-0 lg:ml-0 md:ml-20">
-              <div className="flex items-center">
-                <div className="flex flex-col">
-                  <h1 className="bg-white font-aventa xl:text-[16px] text-black rounded-l-[10px] px-6 p-1">
-                    {name}
-                  </h1>
-                  <h1 className="font-aventa text-[13px] text-btn_hover ">
-                    Branch Manager
-                  </h1>
+              <div className="w-fit  xl:ml-0 lg:ml-0 ">
+                <div className="flex items-center">
+                  <div className="flex flex-col">
+                    <h1 className="bg-white text-nowrap text-2xl font-bold font-aventa  text-black rounded-l-[10px] px-6 p-1">
+                      {name}
+                    </h1>
+                    <h1 className="font-aventa text-[13px] text-btn_hover ">
+                      Branch Manager
+                    </h1>
+                  </div>
+                  <img
+                    src={image}
+                    className="xl:h-[180px] xl:w-[180px] lg:w-[180px] lg:h-[180px] md:w-[150px] md:h-[150px] w-[100px] h-[100px] border-4 xl:rounded-[47px] lg:rounded-[47px] md:rounded-[40px] rounded-[30px] border-white"
+                  ></img>
                 </div>
-                <img
-                  src={image}
-                  className="xl:h-[180px] xl:w-[180px] lg:w-[180px] lg:h-[180px] md:w-[150px] md:h-[150px] w-[100px] h-[100px] border-4 xl:rounded-[47px] lg:rounded-[47px] md:rounded-[40px] rounded-[30px] border-white"
-                ></img>
               </div>
             </div>
           </div>

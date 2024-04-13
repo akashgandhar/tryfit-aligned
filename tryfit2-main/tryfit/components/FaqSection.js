@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function FaqSection() {
@@ -106,7 +107,7 @@ export default function FaqSection() {
     <div className="flex flex-col justify-center items-center mt-8 pr-8 ml-8 lg:pr-20  md:pr-20 md:ml-20 lg:ml-20 xl:ml-40 xl:pr-40">
       <div className="flex w-full  bg-faq_background rounded-t-[26px] items-start justify-center pt-16">
         <div className="flex flex-col items-center">
-          <button className="btn_green inline-flex items-center text-xs btn_shadow py-0.5 px-2 xl:py-0.5 xl:px-16 md:py-0.5 md:px-24 lg:py-0.5 lg:px-16 gap-3 xl:rounded-[15px] lg:rounded-[15px] md:rounded-[15px] rounded-lg">
+        <Link href={"/Contact#FAQ"}><button className="btn_green inline-flex items-center text-xs btn_shadow py-0.5 px-2 xl:py-0.5 xl:px-16 md:py-0.5 md:px-24 lg:py-0.5 lg:px-16 gap-3 xl:rounded-[15px] lg:rounded-[15px] md:rounded-[15px] rounded-lg">
             <svg
               className="w-8 h-8 hidden md:block"
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +121,7 @@ export default function FaqSection() {
                 <circle cx={16} cy={12} r={1}></circle>
               </g>
             </svg>
-            <p className="font-aventa">Frequently Asked Questions</p>
+           <p className="font-aventa">Frequently Asked Questions</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -135,7 +136,7 @@ export default function FaqSection() {
                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
               />
             </svg>
-          </button>
+          </button></Link>
           <h1 className="font-heavitas text-white text-xl md:text-4xl lg:text-5xl xl:text-6xl mt-11">
             EMPOWERING
           </h1>

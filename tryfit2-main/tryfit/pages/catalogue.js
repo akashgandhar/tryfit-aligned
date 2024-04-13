@@ -57,6 +57,8 @@ export default function Catalogue() {
   const headingRef2 = useRef(null);
   const isInView2 = useInView(headingRef2);
 
+  const [category, setCategory] = useState("");
+
   return (
     <div className="overflow-x-hidden">
       <Header />
@@ -85,6 +87,27 @@ export default function Catalogue() {
           Longevity And Performance
         </p>
       </motion.div>
+
+      <div className="flex justify-center mt-20 px-32 xl:hidden">
+        <select
+          value={category}
+          onClick={(e) => setCategory(e.target.value)}
+          className="text-white bg-white/15 rounded-[27px] p-2 w-full "
+        >
+          <option className="text-black" value="volvo">
+            Categories
+          </option>
+          {
+            // Loop through the category data
+            categoryData.map((item) => (
+              <option className="text-black" key={item.id} value={item.Name}>
+                {item.Name}
+              </option>
+            ))
+          }
+        </select>
+      </div>
+
       <div className="hidden xl:grid xl:grid-cols-[0.4fr_1.6fr] mt-32">
         <motion.div
           variants={fadeIn("right", "tween", 0.5, 1)}
@@ -98,8 +121,11 @@ export default function Catalogue() {
           </h1>
           {categoryData.map((item, index, i = 0) => (
             <div
+              onClick={() => setCategory(item.Name)}
               key={item.id}
-              className="flex flex-col ml-5 font-ABeeZee text-xl mt-8"
+              className={`flex flex-col ml-5 font-ABeeZee text-xl mt-8 ${
+                category === item.Name && "text-btn_hover"
+              } hover:text-btn_hover cursor-pointer`}
             >
               {" "}
               {/* Wrap each item in a div */}
@@ -107,25 +133,53 @@ export default function Catalogue() {
             </div>
           ))}
         </motion.div>
-        <div className="grid xl:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr] ml-6 pr-32">
-          {userData.map((user) => (
-            <Link
-              href={`/product/${user.id}`}
-              key={user.id}
-              className=" border  border-gray_border text-white "
-            >
-              <img
-                src={user.Image}
-                alt="Coming Soon"
-                className="xl:h-[350px] lg:h-[300px] md:h-[300px] h-[200px] w-full rounded-[40px] p-4"
-              />
-              <p className=" ml-4 text-4xl text-white font-heavitas font-semibold">
-                {user.Name}
-              </p>
-              <p className="ml-4 font-ABeeZee pb-4">{user.CategoryID}</p>
-            </Link>
-          ))}
-        </div>
+
+        {category ? (
+          <div className="grid xl:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr] ml-6 pr-32">
+            {userData
+              .filter((user) => user.CategoryID === category)
+              .map((user) => (
+                <Link
+                  href={`/product/${user.id}`}
+                  key={user.id}
+                  className={` border ${
+                    userData?.filter((user) => user.CategoryID === category)
+                      .length <= 3 && "h-[30rem]"
+                  } h-auto border-gray_border text-white `}
+                >
+                  <img
+                    src={user.Image}
+                    alt="Coming Soon"
+                    className="xl:h-[350px] lg:h-[300px] md:h-[300px] h-[200px] w-full rounded-[40px] p-4"
+                  />
+                  <p className=" ml-4 text-4xl text-white font-heavitas font-semibold">
+                    {user.Name}
+                  </p>
+                  <p className="ml-4 font-ABeeZee pb-4">{user.CategoryID}</p>
+                </Link>
+              ))}
+          </div>
+        ) : (
+          <div className="grid xl:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr] ml-6 pr-32">
+            {userData.map((user) => (
+              <Link
+                href={`/product/${user.id}`}
+                key={user.id}
+                className=" border  border-gray_border text-white "
+              >
+                <img
+                  src={user.Image}
+                  alt="Coming Soon"
+                  className="xl:h-[350px] lg:h-[300px] md:h-[300px] h-[200px] w-full rounded-[40px] p-4"
+                />
+                <p className=" ml-4 text-4xl text-white font-heavitas font-semibold">
+                  {user.Name}
+                </p>
+                <p className="ml-4 font-ABeeZee pb-4">{user.CategoryID}</p>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
       <div className="xl:hidden lg:grid lg:grid-cols-[1fr_1fr] sm:grid-cols-[1fr]  mt-8 md:grid md:grid-cols-[1fr_1fr] lg:ml-32 lg:pr-32 md:ml-24 md:pr-24">
         {userData.map((user) => (

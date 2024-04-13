@@ -75,7 +75,7 @@ export default function OurProducts() {
             <Link
               href={`/product/${user.id}`}
               key={user.id}
-              className=" border border-gray_border text-white "
+              className=" border border-gray_border text-white min-h-full"
             >
               <img
                 src={user.Image}
