@@ -175,7 +175,7 @@ export default function Footer() {
             </h2>
           </div>
           <div className=" flex flex-col lg:mt-0 xl:mt-0 md:mt-8 mt-8  md:items-center items-center font-ABeeZee gap-7">
-            <h2>Privacy Policy</h2>
+            <Link href="/PrivacyPolicy">Privacy Policy</Link>
             <h2>Terms Of Use</h2>
           </div>
         </div>
