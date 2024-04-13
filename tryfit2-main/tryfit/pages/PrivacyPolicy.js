@@ -17,12 +17,12 @@ TryFitFabrics recognizes the paramount importance of safeguarding your privacy. 
 By accessing www.tryfitfabrics.com or utilizing any services offered through it, you authorize us (including our representatives, affiliates, and business partners) to:
 
 Contact you via email, phone call, or SMS.
-Offer you services relevant to the product you've opted for.
+Offer you services relevant to the product you have opted for.
 Provide product information.
 Inform you about promotional offers on www.tryfitfabrics.com and offerings by our business partners.
 Deliver services through www.tryfitfabrics.com.
 Undertake any other incidental activities related to the aforementioned purposes.
-Your authorization allows us to contact you for these purposes even if you're registered under Do Not Disturb (DND) or similar services, as long as your account remains active.
+Your authorization allows us to contact you for these purposes even if you are registered under Do Not Disturb (DND) or similar services, as long as your account remains active.
 
 <span className='flex flex-col mt-8 text-xl md:text-2xl lg:text-2xl xl:text-3xl font-heavitas mb-2'>Retention of Personal Information</span>
 
