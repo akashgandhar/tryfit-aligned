@@ -26,32 +26,42 @@ export default function Cgrid() {
             <span className="border-b-2 border-underline">GET IN TOUCH</span>
           </h1>
           <form className=" flex flex-col xl:ml-16 sm:ml-16 md:ml-16 ml-8 mt-16 font-aventa">
-            <div className=" flex flex-col gap-10 w-full pr-10">
-              <input
-                type="text"
-                placeholder="Name *"
-                className="flex input input-placeholder w-full text-dark_green "
-              />
-              <input
-                type="text"
-                placeholder="Last Name *"
-                className="flex input input-placeholder w-full text-dark_green "
-              />
-              <input
-                type="text"
-                placeholder="Phone Number *"
-                className="flex input input-placeholder w-full  text-dark_green "
-              />
-              <input
-                type="text"
-                placeholder="Email *"
-                className="flex input input-placeholder w-full text-dark_green "
-              />
-              <input
-                type="text"
-                placeholder="Message *"
-                className="flex input input-placeholder w-full text-dark_green pb-24"
-              />
+            <div className=" flex flex-col gap-10 w-full pr-10 ">
+              <span className="w-full border-b border-[#547E4C] ">
+                <input
+                  type="text"
+                  placeholder="Name *"
+                  className="flex input input-placeholder w-full text-dark_green "
+                />
+              </span>
+              <span className="w-full border-b border-[#547E4C] ">
+                <input
+                  type="text"
+                  placeholder="Last Name *"
+                  className="flex input input-placeholder w-full text-dark_green "
+                />
+              </span>
+              <span className="w-full border-b border-[#547E4C] ">
+                <input
+                  type="text"
+                  placeholder="Phone Number *"
+                  className="flex input input-placeholder w-full  text-dark_green "
+                />
+              </span>
+              <span className="w-full border-b border-[#547E4C] ">
+                <input
+                  type="text"
+                  placeholder="Email *"
+                  className="flex input input-placeholder w-full text-dark_green "
+                />
+              </span>
+              <span className="w-full border-b border-[#547E4C] ">
+                <input
+                  type="text"
+                  placeholder="Message *"
+                  className="flex input input-placeholder w-full text-dark_green pb-24"
+                />
+              </span>
             </div>
             <button className=" mt-10 w-52 items-center text-center rounded-[17px] py-3.5 bg-dark_green text-4xl mb-5">
               SEND
@@ -59,7 +69,7 @@ export default function Cgrid() {
           </form>
         </span>
       </motion.div>
-      <div className="grid grif-rows-[0.7fr_1.3fr] xl:pr-20  gap-3">
+      <div className="grid grif-rows-[0.7fr_1.3fr] xl:pr-20 gap-3">
         <motion.div
           variants={fadeIn("left", "tween", 0.5, 1)}
           initial="hidden"
@@ -85,25 +95,28 @@ export default function Cgrid() {
           initial="hidden"
           animate={BottomisInView ? "show" : "hidden"}
           ref={bottomDivRef}
-          className=""
+          className="text-left"
         >
-          <span className="flex flex-col p-2 rounded-[25px] bg-light_pink_packground gap-4">
+          <span className="flex flex-col p-2 rounded-[25px] bg-light_pink_packground items-start gap-4 h-full px-8">
             <h1 className=" text-dark_green md:text-3xl lg:text-2xl xl:text-3xl text-center mt-8 font-aventa">
               <span className="border-b-2 border-dark_green">
                 Connect Us Further
               </span>
             </h1>
-            <p className="text-dark_green text-center mt-8 text-2xl font-light font-abessinica">
+            <p className="text-dark_green text-center  text-2xl font-light font-abessinica">
               Reach Us Over Phone
             </p>
             <p className="text-dark_green text-center md:text-3xl lg:text-2xl xl:text-3xl font-semibold">
-              +91 9999999999
+              +91-9899505468
             </p>
-            <p className="text-dark_green text-center  lg:text-xl md:text-xl  xl:text-xl font-abessinica font-light">
+            {/* <p className="text-dark_green text-center md:text-3xl lg:text-2xl xl:text-3xl font-semibold">
+              +86-13357565474
+            </p> */}
+            <p className="text-dark_green text-left  lg:text-xl md:text-xl  xl:text-xl font-abessinica font-light">
               Feel Free To Drop Us A Line Using our Dedicated Email Address:
             </p>
             <p className="text-dark_green text-center mt-2 md:text-3xl lg:text-2xl xl:text-3xl font-semibold xl:pb-20 lg:pb-5 ">
-              fabric123@Gmail.com
+              info@tryfitfabrics.com
             </p>
           </span>
         </motion.div>

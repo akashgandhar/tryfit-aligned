@@ -69,24 +69,24 @@ export default function OurProducts() {
             },
             hidden: { opacity: 0 },
           }}
-          className="grid xl:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr] md:grid-cols-[1fr_1fr] xl:ml-32 xl:mr-32 mt-16  items-center justify-center "
+          className="grid xl:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_1fr] grid-cols-[1fr_1fr] xl:ml-32 xl:mr-32 mt-16  items-center justify-center "
         >
           {limitedUserData.map((user) => (
-            <a
+            <Link
               href={`/product/${user.id}`}
               key={user.id}
-              className=" border  border-gray_border text-white "
+              className=" border border-gray_border text-white "
             >
               <img
                 src={user.Image}
                 alt="Coming Soon"
-                className="xl:h-[350px] lg:h-[300px] md:h-[300px] h-[200px] w-full rounded-[40px] p-4"
+                className="flex-1 xl:h-[350px] lg:h-[300px] md:h-[300px] h-[150px] w-full rounded-[40px] p-4"
               />
-              <p className=" ml-4 text-4xl text-white font-heavitas font-semibold">
+              <p className=" ml-4 text-sm md:text-4xl text-white font-heavitas font-semibold">
                 {user.Name}
               </p>
               <p className="ml-4 font-ABeeZee pb-4">{user.CategoryID}</p>
-            </a>
+            </Link>
           ))}
         </motion.div>
       </div>

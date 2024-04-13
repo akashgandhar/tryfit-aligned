@@ -15,7 +15,7 @@ export default function FabricPerformance() {
   const headingRef = useRef(null);
   const isInView = useInView(headingRef);
   return (
-    <div className="min-h-screen overflow-x-hidden flex flex-col pb-5 sm:py-10">
+    <div className="min-h-screen overflow-x-hidden flex flex-col gap-4 pb-5 sm:py-10">
       <motion.div
         variants={textVariant(0.5)}
         initial="hidden"

@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-10 right-10 z-50 sm:flex-row flex-col flex items-center justify-between text-lg border border-solid border-white/15 rounded-[25px] text-white backdrop-blur-lg bg-white/10 transition-all duration-300 ease-in ${
+      className={`fixed sm:min-h-20  top-0 left-10 right-10 z-50 sm:flex-row flex-col flex items-center justify-between text-lg border border-solid border-white/15 rounded-[25px] text-white backdrop-blur-lg bg-white/10 transition-all duration-300 ease-in ${
         visible ? "header-visible" : "header-hidden"
       } ${visible ? "top-6" : ""}`}
     >

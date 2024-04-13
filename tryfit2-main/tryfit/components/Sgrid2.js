@@ -18,14 +18,20 @@ export default function Sgrid2() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-          <Image src="/images/person.png" alt="ellipse" width="50"
-              height="60" className=" rounded-full" />
+            <Image
+              src="/images/3.jpg"
+              alt="ellipse"
+              width="100"
+              height="100"
+              className=" h-14 w-14 rounded-full object-cover"
+            />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
-              Shivani Jangra
+              Harsh Solanki
             </h2>
           </div>
           <p className="md:text-xs text-xs lg:text-md xl:text-xl mt-6 pr-4 ml-12 max-w-[650px] font-aventa">
-          &quot;As a pro athlete, I need gear that keeps up. Their fabrics exceed expectations. Highly recommended!&quot;
+            &quot;As a pro athlete, I need gear that keeps up. Their fabrics
+            exceed expectations. Highly recommended!&quot;
           </p>
         </span>
       </motion.div>
@@ -37,14 +43,21 @@ export default function Sgrid2() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-          <Image src="/images/person2.png" alt="ellipse" width="50"
-              height="60" className=" rounded-full" />
+            <Image
+              src="/images/4.jpg"
+              alt="ellipse"
+              width="100"
+              height="100"
+              className=" h-14 w-14 rounded-full object-cover"
+            />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
-              Vishal Sharma
+              Bhushan Sachdeva
             </h2>
           </div>
           <p className="md:text-xs text-xs lg:text-md xl:text-xl mt-6 pr-4 ml-12 max-w-[650px] font-aventa">
-          &quot;Stumbled upon this company searching for high-performance gear. Their fabrics are lightweight, breathable, and functional.&quot;
+            &quot;Stumbled upon this company searching for high-performance
+            gear. Their fabrics are lightweight, breathable, and
+            functional.&quot;
           </p>
         </span>
       </motion.span>

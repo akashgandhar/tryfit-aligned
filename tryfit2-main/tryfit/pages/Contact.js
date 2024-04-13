@@ -43,6 +43,12 @@ export default function Contact() {
   const headingRef6 = useRef(null);
   const isInView6 = useInView(headingRef6);
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [intrested, setIntrested] = useState("");
+  const [phone, setPhone] = useState("");
+
   return (
     <div className="overflow-x-hidden">
       <Header />
@@ -68,7 +74,6 @@ export default function Contact() {
           </div>
         </div>
       </motion.div>
-
       {/* Get in Touch Section */}
       <motion.div
         variants={fadeIn("right", "spring", 0.5, 1)}
@@ -81,7 +86,6 @@ export default function Contact() {
           Get In Touch
         </h1>
       </motion.div>
-
       {/* Send A Message */}
 
       <div className="text-white md:ml-20 lg:ml-20 xl:ml-40 grid xl:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr] ml-8 pr-8 lg:pr-20  md:pr-20 xl:pr-40 ">
@@ -100,37 +104,47 @@ export default function Contact() {
           </p>
 
           <form className=" mt-16 flex flex-col">
-            <div className="flex flex-col xl:pr-16 lg:pr-16">
-              <input
-                type="text"
-                placeholder="Name"
-                className="outline-none bg-black/0 input-placeholder2 input2"
-              />
-              <input
-                type="text"
-                placeholder="Email"
-                className="outline-none bg-black/0   input-placeholder2 input2 mt-16 "
-              />
+            <div className="flex flex-col ">
+              <span className="border-b flex  mr-5">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="outline-none bg-black/0 input-placeholder2 input2"
+                />
+              </span>
+              <span className="border-b flex  mr-5">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="outline-none bg-black/0   input-placeholder2 input2 mt-16 "
+                />
+              </span>
             </div>
-            <div className="flex flex-col mt-16 xl:pr-16 lg:pr-16">
-              <input
-                type="text"
-                placeholder="Intrested In"
-                className="outline-none bg-black/0 input-placeholder2 input2"
-              />
-              <input
-                type="text"
-                placeholder="Phone No."
-                className="outline-none bg-black/0 input-placeholder2 input2 mt-16 "
-              />
+            <div className="flex flex-col mt-16 ">
+              <span className="border-b flex  mr-5">
+                <input
+                  type="text"
+                  placeholder="Intrested In"
+                  className="outline-none bg-black/0 input-placeholder2 input2"
+                />{" "}
+              </span>
+              <span className="border-b flex  mr-5">
+                <input
+                  type="text"
+                  placeholder="Phone No."
+                  className="outline-none bg-black/0 input-placeholder2 input2 mt-16 "
+                />
+              </span>
             </div>
-            <input
-              type="text"
-              placeholder="Message"
-              className="outline-none bg-black/0 input-placeholder2 input2  mt-16 xl:mr-16 lg:mr-16"
-            />
+            <span className="border-b flex  mr-5">
+              <input
+                type="text"
+                placeholder="Message"
+                className="outline-none bg-black/0 input-placeholder2 input2 mt-16 xl:mr-16 lg:mr-16"
+              />
+            </span>
           </form>
-          <button className="bg-btn_hover text-black py-2 px-12 mt-8 text-4xl rounded-[7px] font-aventa flex items-center gap-2">
+          <button className="bg-btn_hover hover:scale-[102%] ease-in-out duration-300 transition-all text-black py-2 px-12 mt-8 text-4xl rounded-[7px] font-aventa flex items-center gap-2">
             Sumbit
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -219,9 +233,7 @@ export default function Contact() {
           </div>
         </motion.div>
       </div>
-
       {/* Find Us On Maps */}
-
       {/* FAQ Section */}
       <div className=" text-white mt-44 grid xl:grid-cols-[1fr_1fr]">
         <motion.div

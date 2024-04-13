@@ -119,7 +119,7 @@ body{
 
 
 .input2{
-  @apply outline-none border-b-2 border-white pb-10 text-2xl;
+  @apply outline-none border-b-2 border-white pb-2 text-2xl;
 }
 
 
@@ -416,6 +416,7 @@ body{
   width: calc(250px*18);
   animation: scroll_new 40s linear infinite;
   
+  
 }
 
 @keyframes scroll_new{
@@ -464,12 +465,14 @@ body{
   display: flex;
   padding: 0;
   align-items: center;
-  perspective: 100px;
+  /* perspective: 100px; */
 }
 
 .slide img{
   width: 100%;
 }
+
+
 
 
 

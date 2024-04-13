@@ -1,16 +1,7 @@
 import { useEffect } from 'react';
 
 const MultipleInstagramPostsEmbed = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = "//www.instagram.com/embed.js";
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  
 
   return (
     <div className="instagram-posts-container ">

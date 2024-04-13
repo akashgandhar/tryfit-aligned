@@ -10,7 +10,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 700,
+  
   bgcolor: "background.paper",
   boxShadow: 24,
   px: 2,
@@ -38,16 +38,15 @@ export default function EmailPopUp() {
 
     emailjs
       .send(
-        "service_h11v92z",
-        "template_f9xv7yb",
+        "service_7te7yap",
+        "template_ybue9h1",
         {
           from_name: "TryFit",
-          to_name: "Akash Gandhar",
-          from_email: "tryfit@gmail.com",
+          from_email: "pru.bhatia14@gmail.com",
           to_email: email,
           message: "message",
         },
-        "Kz8FjSu5FV6uEPhxp"
+        "jIRcU-bum0P1ADl0z",
       )
       .then((result) => {
         console.log(result);
@@ -63,7 +62,7 @@ export default function EmailPopUp() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="max-h-full overflow-y-auto">
+        <Box sx={style} className="max-h-screen max-w-[700px] w-[90%] overflow-y-auto">
           {/* x button  */}
           <div className="w-full flex items-center justify-end">
             <button className="w-2 font-bold" onClick={handleClose}>
@@ -71,7 +70,7 @@ export default function EmailPopUp() {
             </button>
           </div>
 
-          <div className="flex flex-row gap-2 w-full items-center justify-center px-2 py-4">
+          <div className="flex flex-col sm:flex-row gap-2 w-full items-center justify-center px-2 py-4">
             {/* an image  */}
             <div className="w-full">
               <img src="/images/email.png" alt="email" />
@@ -92,7 +91,7 @@ export default function EmailPopUp() {
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="Enter your email"
-                  className="w-3/4 p-2 rounded-full shadow-md border-t  border-gray-100"
+                  className="w-3/4 p-2 rounded-full shadow-md border-t  border-gray-100 px-3"
                 />
                 <button
                   onClick={handleSubmit}

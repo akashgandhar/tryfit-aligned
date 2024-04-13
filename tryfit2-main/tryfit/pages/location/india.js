@@ -3,11 +3,13 @@ import Header from "@/components/Header";
 import Accordian1 from "@/components/accordian1";
 import { useState } from "react";
 
+
+
 const accordianData = [
     {
         title: "Delhi/ Ncr",
         Branch: "Gandhi Nagar",
-        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.860852331412!2d77.26270987617846!3d28.663884782654904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5223496b49%3A0x97f00febca9ac5af!2sTRYFIT%20Fabrics!5e0!3m2!1sen!2sin!4v1711728009320!5m2!1sen!2sin",
+        map: "https://maps.google.com/maps?q=TRY+FIT+FABRICS+punjab++&t=&z=13&ie=UTF8&iwloc=&output=embed",
         image: "/images/Branch_Manager.png",
         Name: "Mr. Sunil",
         address: "H.No.6012, Bhatia Building, Subhash Mohalla, Raghubarpura, Lal Batti Chowk, Gandhi Nagar, Delhi-110031",
@@ -16,7 +18,7 @@ const accordianData = [
     {
         title: "Delhi/ Ncr",
         Branch: "Gandhi Nagar",
-        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.860852331412!2d77.26270987617846!3d28.663884782654904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5223496b49%3A0x97f00febca9ac5af!2sTRYFIT%20Fabrics!5e0!3m2!1sen!2sin!4v1711728009320!5m2!1sen!2sin",
+        map: "https://maps.google.com/maps?q=TRY+FIT+FABRICS+meerut&t=&z=13&ie=UTF8&iwloc=&output=embed",
         image: "/images/Branch_Manager.png",
         Name: "Mr. Sunil",
         address: "H.No.6012, Bhatia Building, Subhash Mohalla, Raghubarpura, Lal Batti Chowk, Gandhi Nagar, Delhi-110031",
@@ -25,7 +27,7 @@ const accordianData = [
     {
         title: "Delhi/ Ncr",
         Branch: "Gandhi Nagar",
-        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.860852331412!2d77.26270987617846!3d28.663884782654904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5223496b49%3A0x97f00febca9ac5af!2sTRYFIT%20Fabrics!5e0!3m2!1sen!2sin!4v1711728009320!5m2!1sen!2sin",
+        map: "https://maps.google.com/maps?q=TRY+FIT+FABRICS+No.443%2C+1st+floor%2C+Avinashi+road%2C+and%2C+near+Communist+office%2C+opp.to+Allen+Solly+showroom%2C+Tiruppur%2C+Tamil+Nadu+641602&t=&z=13&ie=UTF8&iwloc=&output=embed",
         image: "/images/Branch_Manager.png",
         Name: "Mr. Sunil",
         address: "H.No.6012, Bhatia Building, Subhash Mohalla, Raghubarpura, Lal Batti Chowk, Gandhi Nagar, Delhi-110031",

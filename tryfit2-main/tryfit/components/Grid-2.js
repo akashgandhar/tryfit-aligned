@@ -18,19 +18,19 @@ export default function Grid2() {
         className="flex flex-col w-full xl:h-[400px]  lg:h-[500px] md:h-[400px] gridbg backdrop-blur-md rounded-[25px] text-white "
       >
         <div className=" mt-[90px] ml-10">
-          <h2 className="flex font-abessinica leading-[5rem] lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
+          <h2 className="flex font-abessinica  lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
             CUSTOM{" "}
           </h2>
-          <h2 className="flex font-abessinica  xl:mt-7 leading-[5rem] lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
+          <h2 className="flex font-abessinica xl:mt-7 lg:text-[70px] text-[40px] md:text-[70px] xl:text-[70px]">
             FABRIC
             <span className="ml-4 mt-2">
-              <svg
+              <svg 
                 width="64"
                 height="50"
                 viewBox="0 0 64 64"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className=""
+                className="hover:scale-105 transition-all ease-in-out duration-300"
               >
                 <circle cx="32" cy="32" r="32" fill="#5B0000" />
                 <path
@@ -97,7 +97,7 @@ export default function Grid2() {
           </div>
           <div className="grid grid-cols-2">
             <div>
-              <button className="flex items-center ml-4 bg-dive_color mt-10 xl:mt-4 md:mt-4 lg:mt-4 px-[25px] py-[10px] rounded-[14px] xl:text-xl md:text-2xl text-xs lg:text-xl">
+              <button className="flex whitespace-nowrap hover:scale-105 transition-all ease-in-out duration-300 items-center ml-4 bg-dive_color mt-10 xl:mt-4 md:mt-4 lg:mt-4 px-[25px] py-[10px] rounded-[14px] xl:text-xl md:text-2xl text-xs lg:text-xl">
                 Read More
                 <svg
                   width="23"

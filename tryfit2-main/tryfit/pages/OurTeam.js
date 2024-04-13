@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/utils/motion";
+import Image from "next/image";
 
 export default function OurTeam() {
   const accordianData = [
@@ -77,8 +78,8 @@ export default function OurTeam() {
         ref={headingRef}
       >
         <div className="flex justify-center mt-32">
-          <button className="flex items-center btn_green  py-1 px-8 sm:px-24  rounded-[20px] space-x-2  ">
-            <svg
+          <button className="flex items-center btn_shadow btn_green py-1 px-6 sm:px-12 md:px-24 rounded-[20px] mt-5 space-x-2  ">
+            {/* <svg
               width="49"
               height="27"
               viewBox="0 0 49 27"
@@ -101,7 +102,29 @@ export default function OurTeam() {
                 fill="#D9D9D9"
                 stroke="#334C1D"
               />
-            </svg>
+            </svg> */}
+
+            <div className="relative w-20 -mt-6">
+              <Image
+                src="/images/1.jpg"
+                width={100}
+                height={100}
+                className="absolute z-10 w-6 h-6 rounded-full object-cover left-8 border "
+              />
+              <Image
+                src="/images/2.jpg"
+                width={100}
+                height={100}
+                className="absolute z-10 w-6 h-6 rounded-full object-cover left-4 border"
+              />
+              <Image
+                src="/images/3.jpg"
+                width={100}
+                height={100}
+                className="absolute z-10 w-6 h-6 rounded-full object-cover border"
+              />
+            </div>
+
             <div className=" text-sm/[21px]">What Others Say About Us</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +232,11 @@ export default function OurTeam() {
           ref={rightDivRef}
           className="grid grid-rows-[1fr_1fr_1fr]"
         >
-          <div className="font-ABeeZee border border-white border-x-0 hover:opacity-100 opacity-50">
+          <div
+            className={`font-ABeeZee border border-white border-x-0 hover:opacity-100 ${
+              title === "Who we are?" ? "opacity-100" : "opacity-50"
+            }`}
+          >
             <button
               className="flex flex-col"
               onClick={() => {
@@ -233,7 +260,11 @@ export default function OurTeam() {
               </p>
             </button>
           </div>
-          <div className="hover:opacity-100 opacity-50">
+          <div
+            className={`font-ABeeZee border border-white border-x-0 hover:opacity-100 ${
+              title === "What we do?" ? "opacity-100" : "opacity-50"
+            }`}
+          >
             <button
               className="flex flex-col no-underline"
               onClick={() => {
@@ -258,7 +289,11 @@ export default function OurTeam() {
               </div>
             </button>
           </div>
-          <div className="hover:opacity-100 opacity-50">
+          <div
+            className={`font-ABeeZee border border-white border-x-0 hover:opacity-100 ${
+              title === "Our Qualities" ? "opacity-100" : "opacity-50"
+            }`}
+          >
             <button
               className="flex flex-col no-underline"
               onClick={() => {
@@ -296,26 +331,26 @@ export default function OurTeam() {
         ref={headingRef3}
         className="flex ml-8  justify-center items-center mt-16 pr-8 lg:pr-20  md:pr-20 md:ml-20 lg:ml-20 xl:ml-40 xl:pr-40 "
       >
-        <div className="w-full  bg-white/15  rounded-[26px] flex flex-col items-center">
+        <div className="w-full bg-white/15  rounded-[26px] flex flex-col items-center">
           <div className="flex gap-4">
-            <h1 className="font-aventa text-white text-3xl md:text-4xl lg:text-5xl xl:text-7xl mt-6 sm:mt-16">
+            <h1 className="font-aventa text-white text-3xl md:text-4xl lg:text-5xl xl:text-5xl mt-6 sm:mt-16">
               The
             </h1>
-            <h1 className="font-aventa text-btn_hover text-3xl md:text-4xl lg:text-5xl xl:text-7xl mt-6 sm:mt-16">
+            <h1 className="font-aventa text-btn_hover text-3xl md:text-3xl lg:text-4xl xl:text-5xl mt-6 sm:mt-16">
               {" "}
               Great Minds
             </h1>
           </div>
           <div className="flex gap-4">
-            <h1 className="font-aventa text-white text-3xl md:text-4xl lg:text-5xl xl:text-7xl  ">
+            <h1 className="font-aventa text-white text-3xl md:text-3xl lg:text-4xl xl:text-5xl  ">
               Behind
             </h1>
-            <h1 className="font-aventa text-btn_hover text-3xl md:text-4xl lg:text-5xl xl:text-7xl  ">
+            <h1 className="font-aventa text-btn_hover text-3xl md:text-3xl lg:text-4xl xl:text-5xl  ">
               {" "}
               Our Success
             </h1>
           </div>
-          <div className="mt-8 sm:mt-20">
+          <div className="mt-8 w-full sm:mt-20">
             <SliderGallery />
           </div>
         </div>

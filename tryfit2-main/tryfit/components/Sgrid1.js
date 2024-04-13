@@ -33,14 +33,20 @@ export default function Sgrid1() {
                 fill="#D9D9D9"
               />
             </svg> */}
-            <Image src="/images/person.png" alt="ellipse" width="50"
-              height="60" className=" rounded-full" />
+            <Image
+              src="/images/1.jpg"
+              alt="ellipse"
+              width="100"
+              height="100"
+              className=" h-14 w-14 rounded-full object-cover"
+            />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
-              Karan Puri
+            Aditya Vadhva
             </h2>
           </div>
           <p className="md:text-xs text-xs lg:text-md xl:text-xl mt-6 pr-4 ml-12 max-w-[650px] font-aventa">
-          &quot;Tried many brands, but none compare. Their apparel keeps me cool, dry, and comfy. I&apos;m a customer for life!&quot;
+            &quot;Tried many brands, but none compare. Their apparel keeps me
+            cool, dry, and comfy. I&apos;m a customer for life!&quot;
           </p>
         </span>
       </motion.div>
@@ -53,14 +59,20 @@ export default function Sgrid1() {
       >
         <span className=" flex flex-col   w-full h-[260px] bg-btn_hover/15 backdrop-blur-md  rounded-[25px]">
           <div className="flex ml-12 mt-12 ">
-          <Image src="/images/person.png" alt="ellipse" width="50"
-              height="60" className=" rounded-full" />
+            <Image
+              src="/images/2.jpg"
+              alt="ellipse"
+              width="100"
+              height="100"
+              className=" h-14 w-14 rounded-full object-cover"
+            />
             <h2 className=" text-2xl md:text-xl lg:text-2xl xl:text-3xl xl:mt-3 lg:mt-3 md:mt-3 font-gilroy ml-8  text-btn_hover">
-              Sundar Nadella
+            Kiran Malhotra
             </h2>
           </div>
           <p className="md:text-xs text-xs lg:text-md xl:text-xl mt-6 pr-4 ml-12 max-w-[650px] font-aventa">
-          &quot;Blown away by their quality fabrics! As a runner, I demand the best. Their tech is unmatched, providing lasting comfort.&quot;
+            &quot;Blown away by their quality fabrics! As a runner, I demand the
+            best. Their tech is unmatched, providing lasting comfort.&quot;
           </p>
         </span>
       </motion.div>
