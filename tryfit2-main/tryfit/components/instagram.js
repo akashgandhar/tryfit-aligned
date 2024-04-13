@@ -10,7 +10,7 @@ const MultipleInstagramPostsEmbed = () => {
           "https://www.instagram.com/p/C4YBo6ZtEv5/",
           "https://www.instagram.com/p/C4dLrhJN2hx/",
         ].map((url, index) => (
-          <InstagramEmbed
+          <InstagramEmbed key={index}
             url={url}
             className="lg:aspect-auto aspect-[9/16] rounded-lg h-56"
           />

@@ -22,7 +22,7 @@ function Timeline() {
             element.buttonText !== "";
 
           return (
-            <VerticalTimelineElement dateClassName="dateText"
+            <VerticalTimelineElement
               contentStyle={{ background: "#333", color: "#fff" }}
               key={element.key}
               date={element.date}
